@@ -806,6 +806,7 @@ a {
   }
   #header {
     background: url("../img/test.png") no-repeat left center/cover, radial-gradient(61.42% 61.42% at 50% 50%, #FF6600 0%, #CD5403 100%);
+    background-position: -100px;
   }
   #values .inner .item {
     -webkit-box-flex: 1;
