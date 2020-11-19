@@ -134,9 +134,10 @@ a {
 #header {
     min-height: 90vh;
     // background-color: $orange;
-    background: url('../img/test.png') no-repeat left center/cover, radial-gradient(61.42% 61.42% at 50% 50%, #FF6600 0%, #CD5403 100%);
+    background: url('../img/test-min.png') no-repeat right center, radial-gradient(61.42% 61.42% at 50% 50%, #FF6600 0%, #CD5403 100%);
     background-blend-mode: luminosity;
     background-attachment: fixed;
+    background-size: contain;
     display: flex;
     align-items: center;
     color: $white;
