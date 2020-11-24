@@ -48,10 +48,22 @@ a {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   padding: 1.4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 #nav .navbar-brand .colored {
   display: none;
+}
+
+#nav .navbar-nav {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 #nav a {
@@ -69,11 +81,15 @@ a {
   background-color: unset;
   background-color: transparent;
   color: #FAFAFA;
+  padding: 1rem 2rem;
+  border-radius: 5px;
 }
 
 #nav a.cta:hover {
-  background-color: #FF6600;
-  color: #FAFAFA;
+  background-color: #FAFAFA;
+  color: #FF6600;
+  padding: 1rem 2rem;
+  border-radius: 5px;
 }
 
 #nav .navbar-nav {
@@ -105,7 +121,7 @@ a {
 }
 
 #nav.scroll a:hover, #nav.scroll a .active {
-  color: #e2ad8a;
+  color: #a24304;
 }
 
 #nav.scroll a.cta {
@@ -113,10 +129,12 @@ a {
   background-color: unset;
   background-color: transparent;
   border-radius: 5px;
+  padding: 1rem 2rem;
 }
 
 #nav.scroll a.cta:hover {
-  color: #e2ad8a;
+  background-color: #003399;
+  color: #FAFAFA;
 }
 
 #nav.scroll .navbar-brand .colored {
@@ -650,6 +668,15 @@ a {
   padding: 3rem 0;
   background-color: #FEF6ED;
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 #contact .footer-wave {
@@ -668,19 +695,20 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 #contact .outer .left, #contact .outer .right {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 40rem;
-          flex: 0 0 40rem;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 40rem;
+          flex: 1 0 40rem;
   margin: 2rem;
 }
 
-#contact .outer .right {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+#contact .outer .left {
+  padding: 3rem;
 }
 
 #contact .outer .right .cta {
@@ -798,11 +826,16 @@ a {
 }
 
 @media screen and (max-width: 500px) {
-  #nav a.nav-link:nth-of-type(5) {
+  #nav a.nav-link:nth-of-type(6) {
     margin-left: unset;
+    margin: 2rem auto;
   }
   #nav a.nav-link:nth-of-type(1) {
     margin-left: unset;
+    margin: 2rem auto;
+  }
+  #nav .nav-link {
+    margin: 2rem auto;
   }
   #header {
     background: url("../img/test.png") no-repeat left center/cover, radial-gradient(61.42% 61.42% at 50% 50%, #FF6600 0%, #CD5403 100%);

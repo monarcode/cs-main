@@ -53,11 +53,17 @@ a {
     z-index: 99;
     transition: all 0.3s ease-in-out;
     padding: 1.4rem;
+    display: flex;
+    align-items: center;
 
     .navbar-brand {
         .colored {
             display: none;
         }
+    }
+
+    .navbar-nav {
+        align-items: center;
     }
 
     a {
@@ -74,10 +80,14 @@ a {
         background-color: unset;
         background-color: transparent;
         color: $white;
+        padding: 1rem 2rem;
+        border-radius: 5px;
 
         &:hover {
-            background-color: $orange;
-            color: $white;
+            background-color: $white;
+            color: $orange;
+            padding: 1rem 2rem;
+            border-radius: 5px;
         }
     }
 
@@ -103,7 +113,7 @@ a {
         transition: all 0.4s ease-in-out;
 
         &:hover, .active {
-            color: #e2ad8a;
+            color: #a24304;
         }
     }
 
@@ -112,11 +122,11 @@ a {
         background-color: unset;
         background-color: transparent;
         border-radius: 5px;
-        // padding: 1rem 2rem;
+        padding: 1rem 2rem;
 
         &:hover {
-            // background-color: $orange;
-            color: #e2ad8a
+            background-color: $blue;
+            color: $white;
         }
     }
 
@@ -537,6 +547,9 @@ a {
     padding: 3rem 0;
     background-color: #FEF6ED;
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     .footer-wave {
         position: absolute;
@@ -549,14 +562,19 @@ a {
         display: flex;
         flex-wrap: wrap;
         align-items: center;
+        justify-content: space-between;
 
         .left, .right {
-            flex: 0 0 40rem;
+            flex: 1 0 40rem;
             margin: 2rem;
         }
 
+        .left {
+            padding: 3rem;
+        }
+
         .right {
-            flex-grow: 1;
+            // flex-grow: 1;
             .cta {
                 background-color: $blue;
                 border: none;
@@ -650,11 +668,17 @@ a {
 @media screen and (max-width: 500px){
 
     #nav {
-        a.nav-link:nth-of-type(5){
+        a.nav-link:nth-of-type(6){
             margin-left: unset;
+            margin: 2rem auto;
         }
         a.nav-link:nth-of-type(1){
             margin-left: unset;
+            margin: 2rem auto;
+        }
+
+        .nav-link {
+            margin: 2rem auto;
         }
     }
 
