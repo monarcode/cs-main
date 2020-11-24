@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Cardo:wght@400;700&family=Montserrat+Alternates:wght@400;500;700&display=swap");
+#header {
+  min-height: 60vh;
+  width: 100%;
+  background: radial-gradient(61.42% 61.42% at 50% 50%, #FF6600 0%, #CD5403 100%);
+  background-attachment: fixed;
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+#header .outer {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+#header .outer h1 {
+  font-size: clamp(3rem, calc(3vw + 3rem), 6rem);
+  font-weight: bold;
+}
+
+#header .wave {
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  max-width: 100%;
+  width: 100%;
+  z-index: 3;
+}
+
+#management {
+  min-height: 100vh;
+  width: 100%;
+  padding: 4rem 0;
+  position: relative;
+}
+
+#management h2 {
+  text-align: center;
+}
+
+#management .members {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 15vh 0;
+}
+
+#management .member {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 260px;
+          flex: 0 0 260px;
+  background-color: #E8E7E7;
+  padding: 1.2rem;
+  margin: 3rem 2rem;
+  position: relative;
+  height: 250px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  border-radius: 10px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+#management .member .member-img {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  bottom: 0;
+  max-width: 100%;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+#management .member .member-img img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+#management .member:hover .member-img, #management .member:active .member-img {
+  bottom: 40%;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+#management .member h3 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+#management .member p {
+  color: #828282;
+}
+/*# sourceMappingURL=leadership.css.map */
