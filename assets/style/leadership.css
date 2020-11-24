@@ -88,25 +88,191 @@
   transition: all 0.3s ease-in-out;
 }
 
-#management .member .member-img img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  height: 100%;
-  width: 100%;
+#management .member:hover, #management .member:active {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  -webkit-box-shadow: 0 5px 20px linear-gradient(140.12deg, #FF8E26 -1.76%, #990000 106.01%);
+          box-shadow: 0 5px 20px linear-gradient(140.12deg, #FF8E26 -1.76%, #990000 106.01%);
 }
 
 #management .member:hover .member-img, #management .member:active .member-img {
-  bottom: 40%;
+  bottom: 30%;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 
 #management .member h3 {
-  font-size: 2rem;
+  font-size: 1.6rem;
   font-weight: bold;
+  line-height: 16px;
 }
 
 #management .member p {
   color: #828282;
+  font-size: 1.2rem;
+  line-height: 12px;
+}
+
+#management .member .links {
+  margin-top: 0;
+}
+
+#board {
+  min-height: 100vh;
+  padding: 2rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#board .members {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 4rem;
+}
+
+#board .member {
+  max-width: 70%;
+  position: relative;
+  margin: 3.5rem 0;
+}
+
+#board .member .details {
+  position: relative;
+  background: linear-gradient(140.12deg, #FF8E26 -1.76%, #990000 106.01%);
+  border-radius: 20px;
+  height: 300px;
+  width: 40%;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  color: #FAFAFA;
+}
+
+#board .member .details h3 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+#board .member .details p {
+  font-size: 1.6rem;
+  font-weight: lighter;
+}
+
+#board .member .details::after {
+  content: '';
+  width: 80%;
+  height: inherit;
+  background: linear-gradient(140.12deg, #FF8E26 -1.76%, #990000 106.01%);
+  position: absolute;
+  z-index: -1;
+  bottom: -30px;
+  -webkit-filter: blur(30px);
+          filter: blur(30px);
+  opacity: 0.3;
+}
+
+#board .member .profile {
+  padding: 1rem;
+  width: 60%;
+  height: 290px;
+  background: rgba(247, 247, 247, 0.87);
+  border: 2px solid rgba(214, 214, 214, 0.17);
+  border-radius: 20px;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  position: absolute;
+  top: 40px;
+  right: 20px;
+  color: #4F4F4F;
+  z-index: 5;
+}
+
+@supports ((-webkit-backdrop-filter: blur()) or (backdrop-filter: blur())) {
+  #board .member .profile {
+    -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+    background: rgba(247, 247, 247, 0.261);
+  }
+}
+
+#board .member:nth-child(even) {
+  margin: 0 0 0 40rem;
+}
+
+@media screen and (max-width: 500px) {
+  #management .member {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 300px;
+            flex: 0 1 300px;
+    margin: 9rem 0;
+  }
+  #management .member-img {
+    max-width: unset;
+    width: 300px;
+    max-height: auto;
+    bottom: 30% !important;
+  }
+  #board .member:nth-child(even) {
+    margin-left: 0;
+  }
+  #board .member {
+    max-width: 100%;
+    height: 250px;
+    border-radius: 10px;
+    overflow: hidden;
+    -webkit-box-shadow: 0 5px 15px rgba(194, 194, 194, 0.378);
+            box-shadow: 0 5px 15px rgba(194, 194, 194, 0.378);
+  }
+  #board .member .details {
+    width: 100%;
+    height: 80px;
+    border-radius: unset;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    padding: 1.4rem;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  #board .member .details h3 {
+    font-size: 2rem;
+    line-height: 10px;
+  }
+  #board .member .details p {
+    line-height: 20px;
+  }
+  #board .member .profile {
+    width: 100%;
+    height: auto;
+    top: unset;
+    right: unset;
+    border-radius: unset;
+    background: unset;
+    padding: 1.4rem;
+  }
 }
 /*# sourceMappingURL=leadership.css.map */
